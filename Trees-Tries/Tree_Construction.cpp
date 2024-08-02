@@ -1,23 +1,23 @@
 // Tree construction from parent array
 
-struct Node {
+class Node {
     int data;
-    struct Node* left = NULL;
-    struct Node* right = NULL;
-    Node() {}
-
-    Node(int x) { data = x; }
+    Node* left = NULL;
+    Node* right = NULL;
+    Node(int x) 
+    { 
+	data = x; 
+	left = NULL;
+	right = NULL;
+    }
 };
 
 // Function to construct binary tree from parent array.
 Node* createTree(int parent[], int n)
 {
-    // Create an array to store the reference
-    // of all newly created nodes corresponding
-    // to node value
     vector<Node*> ref;
 
-    // This root represent the root of the
+    // This root represents the root of the
     // newly constructed tree
     Node* root = new Node();
 
@@ -42,10 +42,11 @@ Node* createTree(int parent[], int n)
             // Check if the parent's left child
             // is NULL then map the left child
             // to its parent.
-            if (ref[parent[i]]->left == NULL)
-                ref[parent[i]]->left = ref[i];
+	    Node* par = ref[parrent[i]];
+            if (par->left == NULL)
+                par->left = ref[i];
             else
-                ref[parent[i]]->right = ref[i];
+                par->right = ref[i];
         }
     }
 
@@ -53,7 +54,7 @@ Node* createTree(int parent[], int n)
     return root;
 }
 
-// Graph as adjacency list
+// Graph as an adjacency list
 
 for(int i=0; i<e; i++)
 {
@@ -66,4 +67,13 @@ for(auto v: edges)
 {
 	adjList[v[0]] = v[1];
 	adjList[v[1]] = v[0];
+}
+
+// Graph from parent array
+
+vector<vector<int>> graph(n);
+for(int i=1;i<n;i++)
+{
+    graph[i].push_back(par[i]);
+    graph[par[i]].push_back(i);
 }
