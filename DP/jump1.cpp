@@ -6,7 +6,8 @@ public:
     bool canJump(vector<int>& nums) {
     int n = nums.size(), maxReach = 0;
     for (int i = 0; i < n; i++) {
-        if (i > maxReach) return false;
+        // i <= maxReach implies prev maxReach can atleast cover or reach i
+        if (i > maxReach) return false; // implies maxReach cannot reach next i let alone last index
         maxReach = max(maxReach, i + nums[i]);
     }
     return true;
