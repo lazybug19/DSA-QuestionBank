@@ -31,6 +31,10 @@ class Solution {
   
   vector<int> numOfIslands(int n, int m, vector<vector<int>> &operators)
   {
+    vector<int> par(n*m);
+    for(int i=0; i<n*m; i++) par[i]=i;
+    vector<int> size(n*m, 1);
+    
     vector<vector<int>> matrix(n, vector<int>(m, 0));
     int r[4] = {-1, 0, 0, 1};
     int c[4] = {0, -1, 1, 0};
