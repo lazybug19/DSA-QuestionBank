@@ -1,4 +1,8 @@
-KADANE'S ALGO: Given an array arr[] of size N. The task is to find the sum of the contiguous subarray within an arr[] with the largest sum.
+/*
+    KADANE'S ALGO: Given an array arr[] of size N. The task is to find the sum of the contiguous subarray within an 
+    arr[] with the largest sum.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
