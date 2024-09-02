@@ -6,7 +6,7 @@ minimum distance between any two of them is the maximum possible. Find the maxim
 
 class Solution {
 public:
-    bool findDistt(vector<int>& stalls, int k, int mid)
+    bool findDist(vector<int>& stalls, int k, int mid)
     {
         int cnt=1; // for stalls[0]
         int n=stalls.size(), last=stalls[0];
