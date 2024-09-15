@@ -1,4 +1,7 @@
-3 Way QuickSort: Given an array A[] consisting of only 0s, 1s, and 2s. The task is to write a function that sorts the given array
+// 3 Way Search: Given an array A[] consisting of only 0s, 1s, and 2s. 
+// The task is to write a function that sorts the given array such that all 0s are followed by all 
+// 1s that are followed by all 2s
+
 #include <bits/stdc++.h>
 using namespace std;
 
