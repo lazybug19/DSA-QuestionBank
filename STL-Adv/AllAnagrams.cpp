@@ -1,3 +1,6 @@
+//Given two strings s and p, return an array of all the start indices of p's 
+//anagrams in s. You may return the answer in any order.
+
 class Solution {
 public:
     bool isAnagram(unordered_map<char, int>& mp, unordered_map<char, int>& ms)
