@@ -37,6 +37,6 @@ public:
             else 
                 mx=mid-1;
         }
-        return mx;
+        return mn;
     }
 };
